@@ -1,0 +1,268 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+.body{
+    background-color: #d9d7d3;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #3a2d1c;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top:0px;
+    z-index: 1000;
+}
+.brand{
+    text-decoration: none;
+    font-size: 30px;
+    color: #d9d7d3;
+    font-weight: 700;
+}
+#check{
+    display: none;
+}
+.icons{
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    display: none;
+}
+.navlinks{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.link{
+    text-decoration: none;
+    color: #b3aa9c;
+    font-weight: 600;
+    transition: 0.4s;
+}
+.link:hover{
+    color: #d9d7d3;
+}
+.hero{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 120px 8%;
+    gap:10%;
+    background-color: #b3aa9c;
+    padding-top: 210px;
+}
+.herotext{
+    animation: fadein 1.5s ease;
+}
+#herotitle{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+#heropara{
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.herobutton{
+    padding: 12px 25px;
+    border:none;
+    background-color: #3a2d1c;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.herobutton:hover{
+    background-color: #997759;
+    color: #220b02;
+    transform: scale(1.10);
+}
+#furnitureimage{
+    width: 100%;
+    border-radius: 15px;
+}
+/* products */
+.products{
+    padding: 0px 8%;
+    text-align: center;
+    background-color: #b3aa9c;
+}
+.producthead{
+    font-size: 35px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: #b3aa9c;
+}
+.productcontainer{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #b3aa9c;
+    padding-bottom: 80px;
+}
+.card{
+    background-color: #d9d7d3;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.8s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.cardimg{
+    width: 100%;
+    object-fit: cover;
+}
+.productbutton{
+    padding: 12px 25px;
+    border:none;
+    background-color: #3a2d1c;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.productbutton:hover{
+    background-color: #997759;
+    color: #220b02;
+    transform: scale(1.10);
+}
+/* banner */
+.banner{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./images/image.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.bannerhead{
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #d9d7d3;
+}
+.bannerpara{
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    color: #d9d7d3;
+    text-align: center;
+}
+.bannerbutton{
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #3a2d1c;
+}
+.content{
+    height: 200px;
+    background-color: #b3aa9c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0px 8%;
+    display: flex;
+    align-items: centre;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.contenthead,.subscribehead{
+    font-size: 25px;
+    margin-top: 40px;
+    color: #220b02;
+    margin-bottom: 10px;
+}
+.contentph,.contentmail{
+    font-size: 16px;
+    font-weight: 300;
+}
+.smlink{
+    margin-top: 10px;
+    color: #220b02;
+}
+.socialicons{
+    margin-top: 300px;
+}
+.box{
+    display: flex;
+}
+.subinput{
+    padding: 10px;
+    width:300px;
+}
+.subbutton{
+    margin-left: 10px;
+    text-align: center;
+}
+.footer{
+    padding: 20px;
+    background-color: #3a2d1c;
+    color: #b3aa9c;
+    text-align: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* animation */
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+@media(max-width:768px){
+    .navbar{
+        padding: 20px 5%;
+    }
+    .icons{
+        display: flex;
+    }
+    #cancelicon{
+        display: none;
+    }
+    #check:checked~.icons #menuicon{
+        display:none;
+    }
+    #check:checked~.icons #cancelicon{
+        display:block;
+    }
+    .navlinks{
+        position: absolute;
+        top:100%;
+        width: 100%;
+        left: 0px;
+        flex-direction: column;
+        background-color: #dabea36e;
+        backdrop-filter: blur(10px);
+        display:none;
+    }
+    #check:checked~.navlinks{
+        display:block;
+        height: fit-content;
+    }
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    #herotitle{
+        font-size: 35px;
+    }
+    .banner,.content{
+        height: fit-content;
+        padding: 40px 8%;
+    }
+}
